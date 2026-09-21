@@ -77,6 +77,22 @@ questions:
     description: "Custom monitoring chart values"
     type: multiline
     group: "Monitoring"
+- variable: registry.enabled
+  default: true
+  label: "Enable custom registry"
+  description: "Enable custom registry (default is Docker Hub)"
+  type: boolean
+  group: "Registry"
+  show_subquestion_if: true
+  subquestions:
+  - variable: registry.host
+    default: 
+    type: string
+    group: "Registry"
+  - variable: registry.authConfigSecretName
+    default:
+    type: string
+    group: "Registry"
 - variable: nodepools.0.name
   default:
   description: "Specify nodepool name"

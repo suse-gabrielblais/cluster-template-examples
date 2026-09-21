@@ -205,6 +205,14 @@ spec:
         # timeout: 0
       workerConcurrency: "10%"
       controlPlaneConcurrency: "10%"
+    {{- if .Values.registry.enabled }}
+    registries:
+      configs:
+        {{ .Values.registry.host }}:
+          {{- if .Values.registry.authConfigSecretName }}
+          authConfigSecretName: {{ .Values.registry.authConfigSecretName }}
+          {{- end }}
+    {{- end }}
 {{- if .Values.agentEnvs }}
   agentEnvVars:
 {{ toYaml .Values.agentEnvs | indent 4 }}

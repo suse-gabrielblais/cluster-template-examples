@@ -38,3 +38,10 @@ monitoring:
   # specify cutsom values set
   # values:
   #   foo: bar
+
+# enable registry host customization
+registry:
+  enabled: true
+  host: ""
+  authConfigSecretName: ""
+  
