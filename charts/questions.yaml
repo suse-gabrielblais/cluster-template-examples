@@ -86,7 +86,7 @@ questions:
   show_subquestion_if: true
   subquestions:
   - variable: registry.host
-    default: 
+    default:
     type: string
     group: "Registry"
   - variable: registry.authConfigSecretName
