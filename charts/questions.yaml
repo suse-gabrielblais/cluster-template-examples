@@ -87,10 +87,12 @@ questions:
   subquestions:
   - variable: registry.host
     default:
+    label: "Registry FQDN"
     type: string
     group: "Registry"
   - variable: registry.authConfigSecretName
     default:
+    label: "Secret name for registry authentication"
     type: string
     group: "Registry"
 - variable: nodepools.0.name
